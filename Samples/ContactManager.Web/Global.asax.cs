@@ -1,10 +1,12 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Controllers;
+using Autofac;
 using ContactManager.Formatters;
 using ContactManager.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Ninject;
+using Thinktecture.Web.Http.DI;
 using Thinktecture.Web.Http.Formatters;
 using Thinktecture.Web.Http.Handlers;
 using Thinktecture.Web.Http.Selectors;
@@ -24,15 +26,14 @@ namespace ContactManager
             config.Formatters.Add(new ContactCalendarFormatter());
             
             config.MessageHandlers.Add(new UriFormatExtensionHandler(new UriExtensionMappings()));
-
-            var kernel = new StandardKernel();
-            kernel.Bind<IContactRepository>().ToConstant(new InMemoryContactRepository());
-            kernel.Bind<IHttpActionSelector>().ToConstant(new CorsActionSelector());
             
-            config.ServiceResolver.SetResolver(
-                t => kernel.TryGet(t),
-                t => kernel.GetAll(t));
+            var containerBuilder = new ContainerBuilder();
+            containerBuilder.RegisterType<InMemoryContactRepository>().As<IContactRepository>();
+            containerBuilder.RegisterType<CorsActionSelector>().As<IHttpActionSelector>();
+            var container = containerBuilder.Build();
 
+            config.ServiceResolver.SetResolver(new AutoFacResolver(container));
+                
             config.Routes.MapHttpRoute(
                 "Default",
                 "{controller}/{id}/{ext}",

@@ -26,7 +26,7 @@ namespace ContactManager.APIs
                 var response = new HttpResponseMessage
                                    {
                                        StatusCode = HttpStatusCode.NotFound,
-                                       Content = new StringContent("Contact not found")
+                                       Content = new StringContent("Contact not found.")
                                    };
 
                 throw new HttpResponseException(response);
