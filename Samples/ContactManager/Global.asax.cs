@@ -26,7 +26,7 @@ namespace ContactManager
             config.MessageHandlers.Add(new UriFormatExtensionHandler(new UriExtensionMappings()));
 
             var kernel = new StandardKernel();
-            kernel.Bind<IContactRepository>().ToConstant(new ContactRepository());
+            kernel.Bind<IContactRepository>().ToConstant(new InMemoryContactRepository());
             kernel.Bind<IHttpActionSelector>().ToConstant(new CorsActionSelector());
             
             config.ServiceResolver.SetResolver(

@@ -4,13 +4,13 @@ using System.Linq;
 
 namespace ContactManager.Models
 {
-    public class ContactRepository : IContactRepository
+    public class InMemoryContactRepository : IContactRepository
     {
         private int nextContactId;
 
         private readonly IList<Contact> contacts;
 
-        public ContactRepository()
+        public InMemoryContactRepository()
         {
             contacts = new List<Contact>();
 

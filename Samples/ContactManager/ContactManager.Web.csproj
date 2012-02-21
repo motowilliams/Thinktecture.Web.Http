@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ContactManager</RootNamespace>
-    <AssemblyName>ContactManager</AssemblyName>
+    <RootNamespace>ContactManager.Web</RootNamespace>
+    <AssemblyName>ContactManager.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
@@ -136,17 +136,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="APIs\ContactController.cs" />
-    <Compile Include="APIs\ContactsController.cs" />
     <Compile Include="Formatters\ContactCalendarFormatter.cs" />
     <Compile Include="Formatters\ContactPngFormatter.cs" />
     <Compile Include="Formatters\VCardFormatter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Contact.cs" />
-    <Compile Include="Models\ContactRepository.cs" />
-    <Compile Include="Models\IContactRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -217,7 +212,9 @@
     <Content Include="Scripts\knockout-2.0.0.debug.js" />
     <Content Include="Scripts\knockout-2.0.0.js" />
     <Content Include="Scripts\modernizr-2.0.6-development-only.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -237,6 +234,14 @@
     <ProjectReference Include="..\..\Thinktecture.Web.Http\Thinktecture.Web.Http.csproj">
       <Project>{915BB2DC-0A07-4DBB-802B-C299B3A492EC}</Project>
       <Name>Thinktecture.Web.Http</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ContactManager.APIs\ContactManager.APIs.csproj">
+      <Project>{823DDCBC-F7BF-4AA6-A285-236FD482D40C}</Project>
+      <Name>ContactManager.APIs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ContactManager.Models\ContactManager.Models.csproj">
+      <Project>{A9E9CB97-9693-4311-A872-D710CB1EB060}</Project>
+      <Name>ContactManager.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
