@@ -12,13 +12,14 @@ namespace ContactManager.Formatters
     {
         public VCardFormatter()
         {
-            this.SupportedMediaTypes.Add(
+            SupportedMediaTypes.Add(
                 new MediaTypeHeaderValue("text/directory"));
         }
 
         protected override void OnWriteToStream(Type type, object value, Stream stream, HttpContentHeaders contentHeaders, FormatterContext formatterContext, TransportContext transportContext)
         {
             var contacts = value as IEnumerable<Contact>;
+
             if (contacts != null)
             {
                 foreach (var contact in contacts)
@@ -30,6 +31,7 @@ namespace ContactManager.Formatters
             else
             {
                 var singleContact = value as Contact;
+
                 if (singleContact != null)
                 {
                     WriteContact(singleContact, stream);

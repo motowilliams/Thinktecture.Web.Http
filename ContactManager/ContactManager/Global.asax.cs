@@ -2,6 +2,8 @@
 using System.Web.Http.Controllers;
 using ContactManager.Formatters;
 using ContactManager.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Ninject;
 using Thinktecture.Web.Http.Formatters;
 using Thinktecture.Web.Http.Handlers;
@@ -13,11 +15,14 @@ namespace ContactManager
     {
         public static void RegisterApis(HttpConfiguration config)
         {
+            var serializerSettings = new JsonSerializerSettings();
+            serializerSettings.Converters.Add(new IsoDateTimeConverter());
+            config.Formatters[0] = new JsonNetFormatter(serializerSettings);
+            config.Formatters.Add(new ProtoBufFormatter()); 
             config.Formatters.Add(new ContactPngFormatter());
             config.Formatters.Add(new VCardFormatter());
-            config.Formatters.Add(new CalendarFormatter());
-            config.Formatters.Add(new ProtoBufFormatter());
-
+            config.Formatters.Add(new ContactCalendarFormatter());
+            
             config.MessageHandlers.Add(new UriFormatExtensionHandler(new UriExtensionMappings()));
 
             var kernel = new StandardKernel();

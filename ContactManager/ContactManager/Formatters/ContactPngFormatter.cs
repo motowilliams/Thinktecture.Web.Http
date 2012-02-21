@@ -12,13 +12,14 @@ namespace ContactManager.Formatters
     {
         public ContactPngFormatter()
         {
-            this.SupportedMediaTypes.Add(
+            SupportedMediaTypes.Add(
                 new MediaTypeHeaderValue("image/png"));
         }
 
         protected override void OnWriteToStream(Type type, object value, Stream stream, HttpContentHeaders contentHeaders, FormatterContext formatterContext, TransportContext context)
         {
             var contact = value as Contact;
+
             if (contact != null)
             {
                 var imageId = contact.Id % 8;
@@ -28,6 +29,7 @@ namespace ContactManager.Formatters
                 }
 
                 var path = string.Format(CultureInfo.InvariantCulture, @"{0}bin\Images\Image{1}.png", AppDomain.CurrentDomain.BaseDirectory, imageId);
+                
                 using (var fileStream = new FileStream(path, FileMode.Open))
                 {
                     byte[] bytes = new byte[fileStream.Length];

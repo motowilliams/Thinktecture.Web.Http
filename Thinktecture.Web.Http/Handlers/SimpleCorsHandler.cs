@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Thinktecture.Web.Http.Handlers
 {
+    // Code based on: http://code.msdn.microsoft.com/Implementing-CORS-support-a677ab5d
     public class SimpleCorsHandler : DelegatingHandler
     {
         private const string Origin = "Origin";

@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 
 namespace Thinktecture.Web.Http.Formatters
 {
+    // Code based on: http://code.msdn.microsoft.com/Using-JSONNET-with-ASPNET-b2423706
     public class JsonNetFormatter : MediaTypeFormatter
     {
         private readonly JsonSerializerSettings jsonSerializerSettings;

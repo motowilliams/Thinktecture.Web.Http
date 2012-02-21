@@ -10,6 +10,7 @@ using Thinktecture.Web.Http.Filters;
 
 namespace Thinktecture.Web.Http.Selectors
 {
+    // Code based on: http://code.msdn.microsoft.com/Implementing-CORS-support-418970ee
     public class CorsActionSelector : ApiControllerActionSelector
     {
         private const string Origin = "Origin";

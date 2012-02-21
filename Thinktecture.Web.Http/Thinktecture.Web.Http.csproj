@@ -75,6 +75,7 @@
     <Compile Include="Formatters\ProtoBufFormatter.cs" />
     <Compile Include="Formatters\JsonNetFormatter.cs" />
     <Compile Include="Formatters\JsonpFormatter.cs" />
+    <Compile Include="Handlers\MethodOverrideHandler.cs" />
     <Compile Include="Selectors\CorsActionSelector.cs" />
     <Compile Include="Handlers\SimpleCorsHandler.cs" />
     <Compile Include="Handlers\LoggingHandler.cs" />

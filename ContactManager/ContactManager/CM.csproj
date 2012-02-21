@@ -42,6 +42,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="Ninject">
       <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
     </Reference>
@@ -137,7 +138,7 @@
   <ItemGroup>
     <Compile Include="APIs\ContactController.cs" />
     <Compile Include="APIs\ContactsController.cs" />
-    <Compile Include="Formatters\CalendarFormatter.cs" />
+    <Compile Include="Formatters\ContactCalendarFormatter.cs" />
     <Compile Include="Formatters\ContactPngFormatter.cs" />
     <Compile Include="Formatters\VCardFormatter.cs" />
     <Compile Include="Global.asax.cs">

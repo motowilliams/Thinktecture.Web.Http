@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+﻿using System;
 using ProtoBuf;
 
 namespace ContactManager.Models
@@ -14,11 +14,6 @@ namespace ContactManager.Models
         public string Zip { get; set; }
         public string Email { get; set; }
         public string Twitter { get; set; }
-
-        public string Self
-        {
-            get { return string.Format(CultureInfo.CurrentCulture, "contact/{0}", Id); }
-            set { }
-        }
+        public DateTime Birthday { get; set; }        
     }
 }

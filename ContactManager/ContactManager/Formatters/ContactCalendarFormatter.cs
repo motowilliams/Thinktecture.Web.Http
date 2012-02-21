@@ -7,16 +7,17 @@ using ContactManager.Models;
 
 namespace ContactManager.Formatters
 {
-    public class CalendarFormatter : BufferedMediaTypeFormatter
+    public class ContactCalendarFormatter : BufferedMediaTypeFormatter
     {
-        public CalendarFormatter()
+        public ContactCalendarFormatter()
         {
-            this.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/calendar"));
+            SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/calendar"));
         }
 
         protected override void OnWriteToStream(Type type, object value, Stream stream, HttpContentHeaders contentHeaders, FormatterContext formatterContext, TransportContext transportContext)
         {
             var singleContact = value as Contact;
+
             if (singleContact != null)
             {
                 WriteEvent(singleContact, stream);
@@ -30,7 +31,7 @@ namespace ContactManager.Formatters
 
         private void WriteEvent(Contact contact, Stream stream)
         {
-            var dateFormat = "yyyyMMddTHHmmssZ";
+            const string dateFormat = "yyyyMMddTHHmmssZ";
             var eventDate = DateTime.Now.ToUniversalTime().AddDays(2).AddHours(4);
             var writer = new StreamWriter(stream);
             writer.WriteLine("BEGIN:VCALENDAR");
