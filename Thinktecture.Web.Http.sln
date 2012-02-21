@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F100
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{675D8093-097F-4D9F-8E00-1A1FC482010E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Web", "Samples\ContactManager\ContactManager.Web.csproj", "{F36FD487-5F92-483F-94CC-5F59E0338FCE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Web", "Samples\ContactManager.Web\ContactManager.Web.csproj", "{F36FD487-5F92-483F-94CC-5F59E0338FCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.ConsoleSelfHost", "Samples\ContactManagerConsoleSelfHost\ContactManager.ConsoleSelfHost.csproj", "{882FF1EC-C8FD-4062-BD38-534AC7CB6E6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.ConsoleSelfHost", "Samples\ContactManager.ConsoleSelfHost\ContactManager.ConsoleSelfHost.csproj", "{882FF1EC-C8FD-4062-BD38-534AC7CB6E6D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactManager.Models", "Samples\ContactManager.Models\ContactManager.Models.csproj", "{A9E9CB97-9693-4311-A872-D710CB1EB060}"
 EndProject
