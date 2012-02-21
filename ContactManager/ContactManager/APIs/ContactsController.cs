@@ -1,8 +1,11 @@
-﻿using System.Linq;
+﻿using System;
+using System.Globalization;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using ContactManager.Models;
+using Thinktecture.Web.Http.Filters;
 
 namespace ContactManager.APIs
 {
@@ -15,23 +18,23 @@ namespace ContactManager.APIs
             this.repository = repository;
         }
 
+        [EnableCors]
         public IQueryable<Contact> Get()
         {
             return repository.GetAll().AsQueryable();
         }
 
         public HttpResponseMessage<Contact> Post(Contact contact)
-        {
-            var rd = Request.GetRouteData();
-
-            string uri = Url.Route(routeName: "Default", routeValues: new { controller = "Contacts", id = contact.ContactId });
-
+        {            
             repository.Post(contact);
+            
             var response = new HttpResponseMessage<Contact>(contact)
                             {
                                 StatusCode = HttpStatusCode.Created
                             };
-
+            response.Headers.Location = new Uri(
+                ControllerContext.Request.RequestUri.LocalPath + "/" + contact.Id.ToString(CultureInfo.InvariantCulture), UriKind.Relative);
+            
             return response;
         }
     }

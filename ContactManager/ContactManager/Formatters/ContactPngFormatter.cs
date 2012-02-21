@@ -1,8 +1,4 @@
-﻿// <copyright>
-//   Copyright (c) Microsoft Corporation.  All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Globalization;
 using System.IO;
 using System.Net;
@@ -25,7 +21,7 @@ namespace ContactManager.Formatters
             var contact = value as Contact;
             if (contact != null)
             {
-                var imageId = contact.ContactId % 8;
+                var imageId = contact.Id % 8;
                 if (imageId == 0)
                 {
                     imageId++;

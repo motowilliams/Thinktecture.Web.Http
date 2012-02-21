@@ -3,11 +3,12 @@ using System.IO;
 using System.Net;
 using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using ProtoBuf.Meta;
 
 namespace Thinktecture.Web.Http.Formatters
 {
-    public class ProtoBufFormatter : BufferedMediaTypeFormatter
+    public class ProtoBufFormatter : MediaTypeFormatter
     {
         private static readonly RuntimeTypeModel model = TypeModel.Create();
         private static readonly MediaTypeHeaderValue mediaType = new MediaTypeHeaderValue("application/x-protobuf");
@@ -34,22 +35,19 @@ namespace Thinktecture.Web.Http.Formatters
             return CanReadTypeCore(type);
         }
 
-        protected override object OnReadFromStream(Type type, Stream stream, HttpContentHeaders contentHeaders,
-                                                   FormatterContext formatterContext)
+        protected override Task<object> OnReadFromStreamAsync(Type type, Stream stream, HttpContentHeaders contentHeaders, FormatterContext formatterContext)
         {
-            return model.Deserialize(stream, null, type); //Serializer.NonGeneric.Deserialize(type, stream);
+            return Task.Factory.StartNew(() => model.Deserialize(stream, null, type));
         }
 
-        protected override void OnWriteToStream(Type type, object value, Stream stream,
-                                                HttpContentHeaders contentHeaders, FormatterContext formatterContext,
-                                                TransportContext transportContext)
+        protected override Task OnWriteToStreamAsync(Type type, object value, Stream stream, HttpContentHeaders contentHeaders, FormatterContext formatterContext, TransportContext transportContext)
         {
-            model.Serialize(stream, value); //Serializer.Serialize(stream, value);
+            return Task.Factory.StartNew(() => model.Serialize(stream, value));
         }
 
         private static bool CanReadTypeCore(Type type)
         {
-            if (type == typeof (IKeyValueModel))
+            if (type == typeof(IKeyValueModel))
             {
                 return false;
             };

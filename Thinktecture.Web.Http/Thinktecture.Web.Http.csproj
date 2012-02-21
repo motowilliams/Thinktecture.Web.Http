@@ -71,10 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\EnableCorsAttribute.cs" />
+    <Compile Include="Formatters\ProtoBufFormatter.cs" />
     <Compile Include="Formatters\JsonNetFormatter.cs" />
     <Compile Include="Formatters\JsonpFormatter.cs" />
-    <Compile Include="Formatters\ProtoBufFormatter.cs" />
-    <Compile Include="Handlers\CorsHandler.cs" />
+    <Compile Include="Selectors\CorsActionSelector.cs" />
+    <Compile Include="Handlers\SimpleCorsHandler.cs" />
     <Compile Include="Handlers\LoggingHandler.cs" />
     <Compile Include="Handlers\UriExtensionMappings.cs" />
     <Compile Include="Handlers\UriFormatExtensionHandler.cs" />

@@ -1,9 +1,11 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Controllers;
 using ContactManager.Formatters;
 using ContactManager.Models;
 using Ninject;
 using Thinktecture.Web.Http.Formatters;
 using Thinktecture.Web.Http.Handlers;
+using Thinktecture.Web.Http.Selectors;
 
 namespace ContactManager
 {
@@ -20,14 +22,16 @@ namespace ContactManager
 
             var kernel = new StandardKernel();
             kernel.Bind<IContactRepository>().ToConstant(new ContactRepository());
+            kernel.Bind<IHttpActionSelector>().ToConstant(new CorsActionSelector());
+            
             config.ServiceResolver.SetResolver(
                 t => kernel.TryGet(t),
                 t => kernel.GetAll(t));
 
             config.Routes.MapHttpRoute(
-                "Default", // Route name
-                "{controller}/{id}/{ext}", // URL with parameters
-                new { id = RouteParameter.Optional, ext = RouteParameter.Optional } // Parameter defaults
+                "Default",
+                "{controller}/{id}/{ext}",
+                new { id = RouteParameter.Optional, ext = RouteParameter.Optional }
             );
             //config.Routes.MapHttpRoute(
             //    "Contacts", // Route name
@@ -41,5 +45,4 @@ namespace ContactManager
             RegisterApis(GlobalConfiguration.Configuration);
         }
     }
-
 }

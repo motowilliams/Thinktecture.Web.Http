@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using ContactManager.Models;
+using Thinktecture.Web.Http.Filters;
 
 namespace ContactManager.APIs
 {
@@ -15,16 +16,19 @@ namespace ContactManager.APIs
             this.repository = repository;            
         }
 
+        [EnableCors]
         public HttpResponseMessage<Contact> Get(int id)
         {
             var contact = repository.Get(id);
 
             if (contact == null)
             {
-                var response = new HttpResponseMessage();
-                response.StatusCode = HttpStatusCode.NotFound;
-                response.Content = new StringContent("Contact not found");
-                
+                var response = new HttpResponseMessage
+                                   {
+                                       StatusCode = HttpStatusCode.NotFound,
+                                       Content = new StringContent("Contact not found")
+                                   };
+
                 throw new HttpResponseException(response);
             }
 
@@ -42,7 +46,7 @@ namespace ContactManager.APIs
             
             return contact;
         }
-        
+                
         public Contact Delete(int id)
         {
             var deleted = repository.Get(id);

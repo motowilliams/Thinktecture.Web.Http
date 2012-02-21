@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Thinktecture.Web.Http.Handlers
 {
-    public class CorsHandler : DelegatingHandler
+    public class SimpleCorsHandler : DelegatingHandler
     {
         private const string Origin = "Origin";
         private const string AccessControlRequestMethod = "Access-Control-Request-Method";
@@ -18,8 +18,8 @@ namespace Thinktecture.Web.Http.Handlers
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
                                                                CancellationToken cancellationToken)
         {
-            bool isCorsRequest = request.Headers.Contains(Origin);
-            bool isPreflightRequest = request.Method == HttpMethod.Options;
+            var isCorsRequest = request.Headers.Contains(Origin);
+            var isPreflightRequest = request.Method == HttpMethod.Options;
 
             if (isCorsRequest)
             {
@@ -31,16 +31,17 @@ namespace Thinktecture.Web.Http.Handlers
                                 response.Headers.Add(AccessControlAllowOrigin,
                                                     request.Headers.GetValues(Origin).First());
 
-                                string accessControlRequestMethod =
+                                var accessControlRequestMethod =
                                     request.Headers.GetValues(AccessControlRequestMethod).
                                         FirstOrDefault();
+
                                 if (accessControlRequestMethod != null)
                                 {
                                     response.Headers.Add(AccessControlAllowMethods,
                                                         accessControlRequestMethod);
                                 }
 
-                                string requestedHeaders = string.Join(", ", request.Headers.GetValues(AccessControlRequestHeaders));
+                                var requestedHeaders = string.Join(", ", request.Headers.GetValues(AccessControlRequestHeaders));
 
                                 if (!string.IsNullOrEmpty(requestedHeaders))
                                 {
@@ -55,12 +56,11 @@ namespace Thinktecture.Web.Http.Handlers
                 {
                     return base.SendAsync(request, cancellationToken).ContinueWith(t =>
                             {
-                                HttpResponseMessage resp =
-                                    t.Result;
+                                var resp = t.Result;
                                 resp.Headers.Add(
                                     AccessControlAllowOrigin,
-                                    request.Headers.GetValues
-                                        (Origin).First());
+                                    request.Headers.GetValues(Origin).First());
+                                
                                 return resp;
                             });
                 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Specialized;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -16,12 +15,10 @@ namespace Thinktecture.Web.Http.Formatters
 
         public JsonpMediaTypeFormatter()
         {
-            var jsonpMediaType = new MediaTypeHeaderValue("application/javascript");
-
-            SupportedMediaTypes.Add(jsonpMediaType);
+            SupportedMediaTypes.Add(DefaultMediaType);
             SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/javascript"));
 
-            MediaTypeMappings.Add(new UriPathExtensionMapping("jsonp", jsonpMediaType));
+            MediaTypeMappings.Add(new UriPathExtensionMapping("jsonp", DefaultMediaType));
         }
 
         public string CallbackQueryParameter
@@ -29,14 +26,6 @@ namespace Thinktecture.Web.Http.Formatters
             get { return callbackQueryParameter ?? "callback"; }
             set { callbackQueryParameter = value; }
         }
-
-        protected override Task<object> OnReadFromStreamAsync(Type type, Stream stream,
-                                                              HttpContentHeaders contentHeaders,
-                                                              FormatterContext formatterContext)
-        {
-            return base.OnReadFromStreamAsync(type, stream, contentHeaders, formatterContext);
-        }
-
 
         protected override Task OnWriteToStreamAsync(Type type, object value, Stream stream,
                                                      HttpContentHeaders contentHeaders,
@@ -73,7 +62,7 @@ namespace Thinktecture.Web.Http.Formatters
                 return false;
             }
 
-            NameValueCollection query = HttpUtility.ParseQueryString(request.RequestUri.Query);
+            var query = HttpUtility.ParseQueryString(request.RequestUri.Query);
             callback = query[CallbackQueryParameter];
 
             return !string.IsNullOrEmpty(callback);

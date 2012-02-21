@@ -1,9 +1,5 @@
 
-/_ReSharper.Thinktecture.Web.Http
-/ContactManager/_ReSharper.ContactManager
-/ContactManager/ConsoleClient/bin
-/ContactManager/ConsoleClient/obj
-/ContactManager/ContactManager/bin
-/ContactManager/ContactManager/obj
-/Thinktecture.Web.Http/bin
-/Thinktecture.Web.Http/obj
+_ReSharper.*/
+bin/
+obj/
+*.suo

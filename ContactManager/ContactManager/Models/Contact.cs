@@ -6,7 +6,7 @@ namespace ContactManager.Models
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Contact
     {
-        public int ContactId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
@@ -17,7 +17,7 @@ namespace ContactManager.Models
 
         public string Self
         {
-            get { return string.Format(CultureInfo.CurrentCulture, "contact/{0}", this.ContactId); }
+            get { return string.Format(CultureInfo.CurrentCulture, "contact/{0}", Id); }
             set { }
         }
     }
