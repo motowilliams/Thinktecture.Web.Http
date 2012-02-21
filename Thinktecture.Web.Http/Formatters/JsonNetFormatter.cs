@@ -12,8 +12,8 @@ namespace Thinktecture.Web.Http.Formatters
     // Code based on: http://code.msdn.microsoft.com/Using-JSONNET-with-ASPNET-b2423706
     public class JsonNetFormatter : MediaTypeFormatter
     {
-        private readonly JsonSerializerSettings jsonSerializerSettings;
-        private static readonly MediaTypeHeaderValue mediaType = new MediaTypeHeaderValue("application/json");
+        private static readonly MediaTypeHeaderValue mediaType = new MediaTypeHeaderValue("application/json"); 
+        private readonly JsonSerializerSettings jsonSerializerSettings;        
 
         public JsonNetFormatter(JsonSerializerSettings jsonSerializerSettings)
         {

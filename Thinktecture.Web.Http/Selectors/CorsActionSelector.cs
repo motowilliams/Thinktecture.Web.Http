@@ -52,8 +52,8 @@ namespace Thinktecture.Web.Http.Selectors
 
         class PreflightActionDescriptor : HttpActionDescriptor
         {
-            readonly HttpActionDescriptor originalAction;
-            readonly string accessControlRequestMethod;
+            private readonly HttpActionDescriptor originalAction;
+            private readonly string accessControlRequestMethod;
 
             public PreflightActionDescriptor(HttpActionDescriptor originalAction, string accessControlRequestMethod)
             {

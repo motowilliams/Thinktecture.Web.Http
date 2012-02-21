@@ -7,7 +7,7 @@ using System.Web.Http.Filters;
 
 namespace Thinktecture.Web.Http.Filters
 {
-    public class ValidationActionFilter : ActionFilterAttribute
+    public class ValidationAttribute : ActionFilterAttribute
     {
         public override void OnActionExecuting(HttpActionContext context)
         {

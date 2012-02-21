@@ -96,10 +96,11 @@
     <Compile Include="DI\NinjectResolver.cs" />
     <Compile Include="DI\UnityResolver.cs" />
     <Compile Include="Filters\EnableCorsAttribute.cs" />
-    <Compile Include="Filters\ValidationActionFilter.cs" />
+    <Compile Include="Filters\ValidationAttribute.cs" />
     <Compile Include="Formatters\ProtoBufFormatter.cs" />
     <Compile Include="Formatters\JsonNetFormatter.cs" />
     <Compile Include="Formatters\JsonpFormatter.cs" />
+    <Compile Include="Handlers\NotAcceptableHandler.cs" />
     <Compile Include="Handlers\MethodOverrideHandler.cs" />
     <Compile Include="Selectors\CorsActionSelector.cs" />
     <Compile Include="Handlers\SimpleCorsHandler.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Handlers\UriExtensionMappings.cs" />
     <Compile Include="Handlers\UriFormatExtensionHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleObjectContent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -10,8 +10,8 @@ namespace Thinktecture.Web.Http.Formatters
 {
     public class ProtoBufFormatter : MediaTypeFormatter
     {
-        private static readonly RuntimeTypeModel model = TypeModel.Create();
-        private static readonly MediaTypeHeaderValue mediaType = new MediaTypeHeaderValue("application/x-protobuf");
+        private static readonly MediaTypeHeaderValue mediaType = new MediaTypeHeaderValue("application/x-protobuf"); 
+        private static readonly RuntimeTypeModel model = TypeModel.Create();        
 
         public ProtoBufFormatter()
         {

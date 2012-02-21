@@ -21,7 +21,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5ECE43
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B8145CD6-D2EA-4925-8F07-9D932D89C756}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Thinktecture.Web.Http.vsmdi = Thinktecture.Web.Http.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Thinktecture.Web.Http.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -81,6 +93,16 @@ Global
 		{823DDCBC-F7BF-4AA6-A285-236FD482D40C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{823DDCBC-F7BF-4AA6-A285-236FD482D40C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{823DDCBC-F7BF-4AA6-A285-236FD482D40C}.Release|x86.ActiveCfg = Release|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +112,8 @@ Global
 		{882FF1EC-C8FD-4062-BD38-534AC7CB6E6D} = {F10002A0-E70E-49F9-B0EA-BD74A65056F6}
 		{A9E9CB97-9693-4311-A872-D710CB1EB060} = {F10002A0-E70E-49F9-B0EA-BD74A65056F6}
 		{823DDCBC-F7BF-4AA6-A285-236FD482D40C} = {F10002A0-E70E-49F9-B0EA-BD74A65056F6}
+		{CBE4E31B-2E8D-452A-9A8A-74ACAB9C0BFE} = {675D8093-097F-4D9F-8E00-1A1FC482010E}
+		{B8145CD6-D2EA-4925-8F07-9D932D89C756} = {675D8093-097F-4D9F-8E00-1A1FC482010E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
