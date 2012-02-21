@@ -6,7 +6,7 @@ using System.Net.Http.Formatting;
 using System.Net.Http.Headers;
 using ContactManager.Models;
 
-namespace ContactManager.Formatters
+namespace ContactManager.Web.Formatters
 {
     public class VCardFormatter : BufferedMediaTypeFormatter
     {

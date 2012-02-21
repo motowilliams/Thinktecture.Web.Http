@@ -1,19 +1,18 @@
-﻿using System.Web.Http;
+﻿using System.Web;
+using System.Web.Http;
 using System.Web.Http.Controllers;
-using Autofac;
-using ContactManager.Formatters;
 using ContactManager.Models;
+using ContactManager.Web.Formatters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Ninject;
-using Thinktecture.Web.Http.DI;
 using Thinktecture.Web.Http.Formatters;
 using Thinktecture.Web.Http.Handlers;
 using Thinktecture.Web.Http.Selectors;
 
-namespace ContactManager
+namespace ContactManager.Web
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         public static void RegisterApis(HttpConfiguration config)
         {
@@ -25,25 +24,20 @@ namespace ContactManager
             config.Formatters.Add(new VCardFormatter());
             config.Formatters.Add(new ContactCalendarFormatter());
             
-            config.MessageHandlers.Add(new UriFormatExtensionHandler(new UriExtensionMappings()));
+            config.MessageHandlers.Add(new UriFormatExtensionHandler(new UriExtensionMappings()));            
             
-            var containerBuilder = new ContainerBuilder();
-            containerBuilder.RegisterType<InMemoryContactRepository>().As<IContactRepository>();
-            containerBuilder.RegisterType<CorsActionSelector>().As<IHttpActionSelector>();
-            var container = containerBuilder.Build();
+            var kernel = new StandardKernel();
+            kernel.Bind<IContactRepository>().ToConstant(new InMemoryContactRepository());
+            kernel.Bind<IHttpActionSelector>().ToConstant(new CorsActionSelector());
+            config.ServiceResolver.SetResolver(
+                t => kernel.TryGet(t),
+                t => kernel.GetAll(t));
 
-            config.ServiceResolver.SetResolver(new AutoFacResolver(container));
-                
             config.Routes.MapHttpRoute(
                 "Default",
                 "{controller}/{id}/{ext}",
                 new { id = RouteParameter.Optional, ext = RouteParameter.Optional }
             );
-            //config.Routes.MapHttpRoute(
-            //    "Contacts", // Route name
-            //    "{controller}/{action}/{id}/{ext}", // URL with parameters
-            //    new { controller = "Contacts", action = "Get", id = RouteParameter.Optional, ext = RouteParameter.Optional } // Parameter defaults
-            //);
         }
 
         protected void Application_Start()

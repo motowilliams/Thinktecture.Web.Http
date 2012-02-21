@@ -5,11 +5,12 @@ using Autofac;
 
 namespace Thinktecture.Web.Http.DI
 {
+    // NOTE: this is not working the way it should be - still investigating...
     public class AutoFacResolver : IDependencyResolver
     {
         private readonly IContainer container;
 
-        public AutoFacResolver(IContainer container)
+        public AutoFacResolver(IContainer container) : base()
         {
             this.container = container;
         }
