@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.Http.Common</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.Http.HttpRequestMessageCommonExtensions"></member>
+    <member name="M:System.Web.Http.HttpRequestMessageCommonExtensions.CreateResponse(System.Net.Http.HttpRequestMessage)">
+      <returns>Returns <see cref="T:System.Net.Http.HttpResponseMessage" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.HttpRequestMessageCommonExtensions.CreateResponse(System.Net.Http.HttpRequestMessage,System.Net.HttpStatusCode)">
+      <returns>Returns <see cref="T:System.Net.Http.HttpResponseMessage" />.</returns>
+    </member>
+    <member name="T:System.Web.Http.RouteParameter"></member>
+    <member name="F:System.Web.Http.RouteParameter.Optional"></member>
+    <member name="M:System.Web.Http.RouteParameter.ToString">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:System.Web.Http.Common.Error"></member>
+    <member name="M:System.Web.Http.Common.Error.Argument(System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.ArgumentException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.Argument(System.String,System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.ArgumentException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ArgumentNull(System.String)">
+      <returns>Returns <see cref="T:System.ArgumentNullException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ArgumentNull(System.String,System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.ArgumentNullException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ArgumentNullOrEmpty(System.String)">
+      <returns>Returns <see cref="T:System.ArgumentException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ArgumentOutOfRange(System.String,System.Object,System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.ArgumentOutOfRangeException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ArgumentTooLarge(System.String,System.Object,System.Object)">
+      <returns>Returns <see cref="T:System.ArgumentOutOfRangeException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ArgumentTooSmall(System.String,System.Object,System.Object)">
+      <returns>Returns <see cref="T:System.ArgumentOutOfRangeException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ArgumentUriHasQueryOrFragment(System.String,System.Uri)">
+      <returns>Returns <see cref="T:System.ArgumentException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ArgumentUriNotAbsolute(System.String,System.Uri)">
+      <returns>Returns <see cref="T:System.ArgumentException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ArgumentUriNotHttpOrHttpsScheme(System.String,System.Uri)">
+      <returns>Returns <see cref="T:System.ArgumentException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.AsError``1(System.AggregateException)">
+      <returns>Returns <see cref="T:System.Exception" />.</returns>
+      <typeparam name="TPreferredException"></typeparam>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.AsError(System.Exception)">
+      <returns>Returns <see cref="T:System.Exception" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.AsInformation``1(System.AggregateException)">
+      <returns>Returns <see cref="T:System.Exception" />.</returns>
+      <typeparam name="TPreferredException"></typeparam>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.AsInformation(System.Exception)">
+      <returns>Returns <see cref="T:System.Exception" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.AsVerbose``1(System.AggregateException)">
+      <returns>Returns <see cref="T:System.Exception" />.</returns>
+      <typeparam name="TPreferredException"></typeparam>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.AsVerbose(System.Exception)">
+      <returns>Returns <see cref="T:System.Exception" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.AsWarning``1(System.AggregateException)">
+      <returns>Returns <see cref="T:System.Exception" />.</returns>
+      <typeparam name="TPreferredException"></typeparam>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.AsWarning(System.Exception)">
+      <returns>Returns <see cref="T:System.Exception" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.Format(System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.InvalidEnumArgument(System.String,System.Int32,System.Type)">
+      <returns>Returns <see cref="T:System.ComponentModel.InvalidEnumArgumentException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.InvalidOperation(System.Exception,System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.InvalidOperationException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.InvalidOperation(System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.InvalidOperationException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.KeyNotFound">
+      <returns>Returns <see cref="T:System.Collections.Generic.KeyNotFoundException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.KeyNotFound(System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.Collections.Generic.KeyNotFoundException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.NotSupported(System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.NotSupportedException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.ObjectDisposed(System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.ObjectDisposedException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.OperationCanceled">
+      <returns>Returns <see cref="T:System.OperationCanceledException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.OperationCanceled(System.String,System.Object[])">
+      <returns>Returns <see cref="T:System.OperationCanceledException" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.Common.Error.PropertyNull">
+      <returns>Returns <see cref="T:System.ArgumentNullException" />.</returns>
+    </member>
+    <member name="T:System.Web.Http.Common.HttpMethodHelper"></member>
+    <member name="M:System.Web.Http.Common.HttpMethodHelper.GetHttpMethod(System.String)">
+      <returns>Returns <see cref="T:System.Net.Http.HttpMethod" />.</returns>
+    </member>
+    <member name="T:System.Web.Http.Common.ILogger"></member>
+    <member name="M:System.Web.Http.Common.ILogger.Log(System.String,System.Diagnostics.TraceLevel,System.Func`1)"></member>
+    <member name="M:System.Web.Http.Common.ILogger.LogException(System.String,System.Diagnostics.TraceLevel,System.Exception)"></member>
+  </members>
+</doc>

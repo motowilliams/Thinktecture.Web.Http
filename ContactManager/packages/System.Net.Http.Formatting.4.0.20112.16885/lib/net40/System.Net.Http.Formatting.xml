@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Net.Http.Formatting</name>
+  </assembly>
+  <members>
+    <member name="T:System.Net.Http.HttpContentCollectionExtensions"></member>
+    <member name="M:System.Net.Http.HttpContentCollectionExtensions.FindAllContentType(System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent},System.Net.Http.Headers.MediaTypeHeaderValue)">
+      <returns>Returns <see cref="T:System.Collections.Generic.IEnumerable`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentCollectionExtensions.FindAllContentType(System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent},System.String)">
+      <returns>Returns <see cref="T:System.Collections.Generic.IEnumerable`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentCollectionExtensions.FirstDispositionName(System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent},System.String)">
+      <returns>Returns <see cref="T:System.Net.Http.HttpContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentCollectionExtensions.FirstDispositionNameOrDefault(System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent},System.String)">
+      <returns>Returns <see cref="T:System.Net.Http.HttpContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentCollectionExtensions.FirstDispositionType(System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent},System.String)">
+      <returns>Returns <see cref="T:System.Net.Http.HttpContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentCollectionExtensions.FirstDispositionTypeOrDefault(System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent},System.String)">
+      <returns>Returns <see cref="T:System.Net.Http.HttpContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentCollectionExtensions.FirstStart(System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent},System.String)">
+      <returns>Returns <see cref="T:System.Net.Http.HttpContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentCollectionExtensions.FirstStartOrDefault(System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent},System.String)">
+      <returns>Returns <see cref="T:System.Net.Http.HttpContent" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.HttpContentExtensions"></member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsAsync``1(System.Void)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsAsync(System.Void,System.Object)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsAsync(System.Void,System.Object,System.Net.Http.HttpContent)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsAsync(System.Void,System.Object,System.Net.Http.HttpContent,System.Type,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsAsync``1(System.Void,``0)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsAsync``1(System.Void,``0,System.Net.Http.HttpContent,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsOrDefaultAsync``1(System.Void)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsOrDefaultAsync(System.Void,System.Object)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsOrDefaultAsync(System.Void,System.Object,System.Net.Http.HttpContent)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsOrDefaultAsync(System.Void,System.Object,System.Net.Http.HttpContent,System.Type,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsOrDefaultAsync``1(System.Void,``0)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpContentExtensions.ReadAsOrDefaultAsync``1(System.Void,``0,System.Net.Http.HttpContent,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="T:System.Net.Http.HttpContentMessageExtensions"></member>
+    <member name="M:System.Net.Http.HttpContentMessageExtensions.IsHttpRequestMessageContent(System.Net.Http.HttpContent)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentMessageExtensions.IsHttpResponseMessageContent(System.Net.Http.HttpContent)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentMessageExtensions.ReadAsHttpRequestMessageAsync(System.Void)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentMessageExtensions.ReadAsHttpRequestMessageAsync(System.Void,System.Net.Http.HttpRequestMessage)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentMessageExtensions.ReadAsHttpRequestMessageAsync(System.Void,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpContent)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentMessageExtensions.ReadAsHttpResponseMessageAsync(System.Void)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpContentMessageExtensions.ReadAsHttpResponseMessageAsync(System.Void,System.Net.Http.HttpResponseMessage)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.HttpContentMultipartExtensions"></member>
+    <member name="M:System.Net.Http.HttpContentMultipartExtensions.IsMimeMultipartContent(System.Net.Http.HttpContent)"></member>
+    <member name="M:System.Net.Http.HttpContentMultipartExtensions.IsMimeMultipartContent(System.Net.Http.HttpContent,System.String)"></member>
+    <member name="M:System.Net.Http.HttpContentMultipartExtensions.ReadAsMultipartAsync(System.Void)"></member>
+    <member name="M:System.Net.Http.HttpContentMultipartExtensions.ReadAsMultipartAsync(System.Void,System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent})"></member>
+    <member name="M:System.Net.Http.HttpContentMultipartExtensions.ReadAsMultipartAsync(System.Void,System.Collections.Generic.IEnumerable{System.Net.Http.HttpContent},System.Net.Http.HttpContent)"></member>
+    <member name="T:System.Net.Http.HttpMessageContent"></member>
+    <member name="M:System.Net.Http.HttpMessageContent.#ctor(System.Net.Http.HttpRequestMessage)"></member>
+    <member name="M:System.Net.Http.HttpMessageContent.#ctor(System.Net.Http.HttpResponseMessage)"></member>
+    <member name="M:System.Net.Http.HttpMessageContent.Dispose(System.Boolean)"></member>
+    <member name="P:System.Net.Http.HttpMessageContent.HttpRequestMessage">
+      <returns>Returns <see cref="T:System.Net.Http.HttpRequestMessage" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.HttpMessageContent.HttpResponseMessage">
+      <returns>Returns <see cref="T:System.Net.Http.HttpResponseMessage" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpMessageContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpMessageContent.TryComputeLength(System.Int64@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.HttpRequestMessage`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpRequestMessage`1.#ctor"></member>
+    <member name="M:System.Net.Http.HttpRequestMessage`1.#ctor(`0)"></member>
+    <member name="M:System.Net.Http.HttpRequestMessage`1.#ctor(`0,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})"></member>
+    <member name="M:System.Net.Http.HttpRequestMessage`1.#ctor(`0,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.HttpRequestMessage`1.#ctor(`0,System.Net.Http.Headers.MediaTypeHeaderValue,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})"></member>
+    <member name="M:System.Net.Http.HttpRequestMessage`1.#ctor(`0,System.Net.Http.Headers.MediaTypeHeaderValue,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)"></member>
+    <member name="M:System.Net.Http.HttpRequestMessage`1.#ctor(`0,System.Net.Http.HttpMethod,System.Uri,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})"></member>
+    <member name="M:System.Net.Http.HttpRequestMessage`1.#ctor(`0,System.String)"></member>
+    <member name="P:System.Net.Http.HttpRequestMessage`1.Content">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent`1" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.HttpRequestMessageExtensions"></member>
+    <member name="M:System.Net.Http.HttpRequestMessageExtensions.CreateContent(System.Net.Http.HttpRequestMessage,System.Type,System.Object)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpRequestMessageExtensions.CreateContent(System.Net.Http.HttpRequestMessage,System.Type,System.Object,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpRequestMessageExtensions.CreateContent(System.Net.Http.HttpRequestMessage,System.Type,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpRequestMessageExtensions.CreateContent``1(System.Net.Http.HttpRequestMessage,``0)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpRequestMessageExtensions.CreateContent``1(System.Net.Http.HttpRequestMessage,``0,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpRequestMessageExtensions.CreateContent``1(System.Net.Http.HttpRequestMessage,``0,System.Net.Http.Headers.MediaTypeHeaderValue,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="T:System.Net.Http.HttpResponseMessage`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpResponseMessage`1.#ctor(System.Net.HttpStatusCode)"></member>
+    <member name="M:System.Net.Http.HttpResponseMessage`1.#ctor(`0)"></member>
+    <member name="M:System.Net.Http.HttpResponseMessage`1.#ctor(`0,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})"></member>
+    <member name="M:System.Net.Http.HttpResponseMessage`1.#ctor(`0,System.Net.Http.Formatting.IFormatterSelector)"></member>
+    <member name="M:System.Net.Http.HttpResponseMessage`1.#ctor(`0,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.HttpResponseMessage`1.#ctor(`0,System.Net.Http.HttpRequestMessage,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)"></member>
+    <member name="M:System.Net.Http.HttpResponseMessage`1.#ctor(`0,System.Net.Http.HttpRequestMessage,System.Net.Http.Headers.MediaTypeHeaderValue,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)"></member>
+    <member name="M:System.Net.Http.HttpResponseMessage`1.#ctor(`0,System.Net.HttpStatusCode)"></member>
+    <member name="M:System.Net.Http.HttpResponseMessage`1.#ctor(`0,System.Net.HttpStatusCode,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})"></member>
+    <member name="P:System.Net.Http.HttpResponseMessage`1.Content">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent`1" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.HttpResponseMessageExtensions"></member>
+    <member name="M:System.Net.Http.HttpResponseMessageExtensions.CreateContent(System.Net.Http.HttpResponseMessage,System.Type,System.Object)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpResponseMessageExtensions.CreateContent(System.Net.Http.HttpResponseMessage,System.Type,System.Object,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpResponseMessageExtensions.CreateContent(System.Net.Http.HttpResponseMessage,System.Type,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.HttpResponseMessageExtensions.CreateContent``1(System.Net.Http.HttpResponseMessage,``0)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpResponseMessageExtensions.CreateContent``1(System.Net.Http.HttpResponseMessage,``0,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.HttpResponseMessageExtensions.CreateContent``1(System.Net.Http.HttpResponseMessage,``0,System.Net.Http.Headers.MediaTypeHeaderValue,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Formatting.IFormatterSelector)">
+      <returns>Returns <see cref="T:System.Net.Http.ObjectContent`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="T:System.Net.Http.IMultipartStreamProvider"></member>
+    <member name="M:System.Net.Http.IMultipartStreamProvider.GetStream(System.Net.Http.Headers.HttpContentHeaders)">
+      <returns>Returns <see cref="T:System.IO.Stream" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.MultipartFileStreamProvider"></member>
+    <member name="M:System.Net.Http.MultipartFileStreamProvider.#ctor"></member>
+    <member name="M:System.Net.Http.MultipartFileStreamProvider.#ctor(System.String)"></member>
+    <member name="M:System.Net.Http.MultipartFileStreamProvider.#ctor(System.String,System.Int32)"></member>
+    <member name="P:System.Net.Http.MultipartFileStreamProvider.BodyPartFileNames">
+      <returns>Returns <see cref="T:System.Collections.Generic.IEnumerable`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.MultipartFileStreamProvider.GetLocalFileName(System.Net.Http.Headers.HttpContentHeaders)">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.MultipartFileStreamProvider.GetStream(System.Net.Http.Headers.HttpContentHeaders)">
+      <returns>Returns <see cref="T:System.IO.Stream" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.MultipartFileStreamProvider.OnGetStream(System.Net.Http.Headers.HttpContentHeaders)">
+      <returns>Returns <see cref="T:System.IO.Stream" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.MultipartFormDataStreamProvider"></member>
+    <member name="M:System.Net.Http.MultipartFormDataStreamProvider.#ctor"></member>
+    <member name="M:System.Net.Http.MultipartFormDataStreamProvider.#ctor(System.String)"></member>
+    <member name="M:System.Net.Http.MultipartFormDataStreamProvider.#ctor(System.String,System.Int32)"></member>
+    <member name="P:System.Net.Http.MultipartFormDataStreamProvider.BodyPartFileNames">
+      <returns>Returns <see cref="T:System.Collections.Generic.IDictionary`2" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.MultipartFormDataStreamProvider.GetLocalFileName(System.Net.Http.Headers.HttpContentHeaders)">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.MultipartFormDataStreamProvider.GetStream(System.Net.Http.Headers.HttpContentHeaders)">
+      <returns>Returns <see cref="T:System.IO.Stream" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.MultipartFormDataStreamProvider.OnGetStream(System.Net.Http.Headers.HttpContentHeaders)">
+      <returns>Returns <see cref="T:System.IO.Stream" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.ObjectContent"></member>
+    <member name="M:System.Net.Http.ObjectContent.CreateContentReadStreamAsync">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.DefaultFormatter">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.FormatterContext">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.FormatterContext" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.Formatters">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatterCollection" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.FormatterSelector">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.IFormatterSelector" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.HttpContent">
+      <returns>Returns <see cref="T:System.Net.Http.HttpContent" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.ObjectType">
+      <returns>Returns <see cref="T:System.Type" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.ObjectContent.ReadAsync">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.ObjectContent.ReadAsyncInternal``1(System.Void)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.ObjectContent.ReadOrDefaultAsync">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.ObjectContent.SelectReadFormatter">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.ObjectContent.SelectWriteFormatter(System.Net.Http.Headers.MediaTypeHeaderValue@)">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.ObjectContent.SerializeToStreamAsync(System.IO.Stream,System.Net.TransportContext)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.ObjectContent.SetValueWithoutValidation(System.Object)"></member>
+    <member name="M:System.Net.Http.ObjectContent.TryComputeLength(System.Int64@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.WasFormatterCollectionSetExplicitly">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.WasFormatterContextSetExplicitly">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.WasFormatterSelectorSetExplicitly">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.WasMediaTypeSetExplicitly">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.ObjectContent.WriteFormatter">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.ObjectContent`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.ObjectContent`1.ReadAsync">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.ObjectContent`1.ReadOrDefaultAsync">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.UriExtensions"></member>
+    <member name="M:System.Net.Http.UriExtensions.ParseQueryString(System.Uri)">
+      <returns>Returns <see cref="T:System.Collections.Specialized.NameValueCollection" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.UriExtensions.TryReadQueryAs(System.Uri,System.Type,System.Object@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.UriExtensions.TryReadQueryAs``1(System.Uri,``0@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.UriExtensions.TryReadQueryAsJson(System.Uri,System.Json.JsonObject@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.BufferedMediaTypeFormatter"></member>
+    <member name="M:System.Net.Http.Formatting.BufferedMediaTypeFormatter.#ctor"></member>
+    <member name="P:System.Net.Http.Formatting.BufferedMediaTypeFormatter.BufferSize">
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.BufferedMediaTypeFormatter.OnReadFromStream(System.Type,System.IO.Stream,System.Net.Http.Headers.HttpContentHeaders,System.Net.Http.Formatting.FormatterContext)">
+      <returns>Returns <see cref="T:System.Object" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.BufferedMediaTypeFormatter.OnReadFromStreamAsync(System.Void,System.Object,System.Type,System.IO.Stream)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.BufferedMediaTypeFormatter.OnWriteToStream(System.Type,System.Object,System.IO.Stream,System.Net.Http.Headers.HttpContentHeaders,System.Net.Http.Formatting.FormatterContext,System.Net.TransportContext)"></member>
+    <member name="M:System.Net.Http.Formatting.BufferedMediaTypeFormatter.OnWriteToStreamAsync(System.Type,System.Object,System.IO.Stream,System.Net.Http.Headers.HttpContentHeaders,System.Net.Http.Formatting.FormatterContext,System.Net.TransportContext)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.DelegatingEnumerable`1">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.Formatting.DelegatingEnumerable`1.#ctor"></member>
+    <member name="M:System.Net.Http.Formatting.DelegatingEnumerable`1.#ctor(System.Collections.Generic.IEnumerable{`0})"></member>
+    <member name="M:System.Net.Http.Formatting.DelegatingEnumerable`1.Add(System.Object)"></member>
+    <member name="M:System.Net.Http.Formatting.DelegatingEnumerable`1.GetEnumerator">
+      <returns>Returns <see cref="T:System.Collections.Generic.IEnumerator`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.DelegatingEnumerable`1.System#Collections#IEnumerable#GetEnumerator">
+      <returns>Returns <see cref="T:System.Collections.IEnumerator" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.FormatterContext"></member>
+    <member name="M:System.Net.Http.Formatting.FormatterContext.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Boolean)"></member>
+    <member name="M:System.Net.Http.Formatting.FormatterContext.#ctor(System.Net.Http.HttpRequestMessage,System.Boolean)"></member>
+    <member name="M:System.Net.Http.Formatting.FormatterContext.#ctor(System.Net.Http.HttpResponseMessage,System.Boolean)"></member>
+    <member name="P:System.Net.Http.Formatting.FormatterContext.ContentType">
+      <returns>Returns <see cref="T:System.Net.Http.Headers.MediaTypeHeaderValue" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.FormatterContext.IsRead">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.FormatterContext.Request">
+      <returns>Returns <see cref="T:System.Net.Http.HttpRequestMessage" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.FormatterContext.Response">
+      <returns>Returns <see cref="T:System.Net.Http.HttpResponseMessage" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.FormatterSelector"></member>
+    <member name="M:System.Net.Http.Formatting.FormatterSelector.#ctor"></member>
+    <member name="M:System.Net.Http.Formatting.FormatterSelector.OnSelectReadFormatter(System.Type,System.Net.Http.Formatting.FormatterContext,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.FormatterSelector.OnSelectWriteFormatter(System.Type,System.Net.Http.Formatting.FormatterContext,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Headers.MediaTypeHeaderValue@)">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.FormatterSelector.SelectReadFormatter(System.Type,System.Net.Http.Formatting.FormatterContext,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.FormatterSelector.SelectWriteFormatter(System.Type,System.Net.Http.Formatting.FormatterContext,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Headers.MediaTypeHeaderValue@)">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.FormUrlEncodedMediaTypeFormatter"></member>
+    <member name="M:System.Net.Http.Formatting.FormUrlEncodedMediaTypeFormatter.#ctor"></member>
+    <member name="M:System.Net.Http.Formatting.FormUrlEncodedMediaTypeFormatter.CanReadType(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.FormUrlEncodedMediaTypeFormatter.CanWriteType(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.FormUrlEncodedMediaTypeFormatter.DefaultMediaType">
+      <returns>Returns <see cref="T:System.Net.Http.Headers.MediaTypeHeaderValue" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.FormUrlEncodedMediaTypeFormatter.OnReadFromStreamAsync(System.Void,System.Object,System.Type,System.IO.Stream)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.FormUrlEncodedMediaTypeFormatter.OnWriteToStreamAsync(System.Type,System.Object,System.IO.Stream,System.Net.Http.Headers.HttpContentHeaders,System.Net.Http.Formatting.FormatterContext,System.Net.TransportContext)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.FormUrlEncodedMediaTypeFormatter.ReadBufferSize">
+      <returns>Returns <see cref="T:System.Int32" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.IFormatterSelector"></member>
+    <member name="M:System.Net.Http.Formatting.IFormatterSelector.SelectReadFormatter(System.Type,System.Net.Http.Formatting.FormatterContext,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.IFormatterSelector.SelectWriteFormatter(System.Type,System.Net.Http.Formatting.FormatterContext,System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter},System.Net.Http.Headers.MediaTypeHeaderValue@)">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.MediaTypeFormatter" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.IKeyValueModel"></member>
+    <member name="P:System.Net.Http.Formatting.IKeyValueModel.Keys">
+      <returns>Returns <see cref="T:System.Collections.Generic.IEnumerable`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.IKeyValueModel.TryGetValue(System.String,System.Object@)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.JsonMediaTypeFormatter"></member>
+    <member name="M:System.Net.Http.Formatting.JsonMediaTypeFormatter.#ctor"></member>
+    <member name="P:System.Net.Http.Formatting.JsonMediaTypeFormatter.AllowReferenceDataContracts">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.JsonMediaTypeFormatter.CanReadType(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.JsonMediaTypeFormatter.CanWriteType(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.JsonMediaTypeFormatter.CharacterEncoding">
+      <returns>Returns <see cref="T:System.Text.Encoding" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.JsonMediaTypeFormatter.CreateDefaultSerializer(System.Type,System.Collections.Generic.IEnumerable{System.Type},System.Boolean)">
+      <returns>Returns <see cref="T:System.Runtime.Serialization.Json.DataContractJsonSerializer" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.JsonMediaTypeFormatter.DefaultMediaType">
+      <returns>Returns <see cref="T:System.Net.Http.Headers.MediaTypeHeaderValue" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.JsonMediaTypeFormatter.OnReadFromStreamAsync(System.Void,System.Object,System.Type,System.IO.Stream)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.JsonMediaTypeFormatter.OnWriteToStreamAsync(System.Type,System.Object,System.IO.Stream,System.Net.Http.Headers.HttpContentHeaders,System.Net.Http.Formatting.FormatterContext,System.Net.TransportContext)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.JsonMediaTypeFormatter.RemoveSerializer(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.JsonMediaTypeFormatter.SetSerializer``1(System.Runtime.Serialization.Json.DataContractJsonSerializer)">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.Formatting.JsonMediaTypeFormatter.SetSerializer(System.Type,System.Runtime.Serialization.Json.DataContractJsonSerializer)"></member>
+    <member name="T:System.Net.Http.Formatting.MediaRangeMapping"></member>
+    <member name="M:System.Net.Http.Formatting.MediaRangeMapping.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.Formatting.MediaRangeMapping.#ctor(System.String,System.String)"></member>
+    <member name="P:System.Net.Http.Formatting.MediaRangeMapping.MediaRange"></member>
+    <member name="T:System.Net.Http.Formatting.MediaTypeFormatter"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatter.#ctor"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatter.CanReadType(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatter.CanWriteType(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.MediaTypeFormatter.Encoding">
+      <returns>Returns <see cref="T:System.Text.Encoding" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.MediaTypeFormatter.MediaTypeMappings">
+      <returns>Returns <see cref="T:System.Collections.ObjectModel.Collection`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatter.OnGetResponseHeaders(System.Type,System.String,System.Net.Http.HttpResponseMessage)">
+      <returns>Returns <see cref="T:System.Collections.Generic.IEnumerable`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatter.OnReadFromStreamAsync(System.Void,System.Object,System.Type,System.IO.Stream)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatter.OnWriteToStreamAsync(System.Type,System.Object,System.IO.Stream,System.Net.Http.Headers.HttpContentHeaders,System.Net.Http.Formatting.FormatterContext,System.Net.TransportContext)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatter.ReadFromStreamAsync(System.Void,System.Object,System.Type,System.IO.Stream)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.MediaTypeFormatter.SupportedMediaTypes">
+      <returns>Returns <see cref="T:System.Collections.ObjectModel.Collection`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatter.WriteToStreamAsync(System.Type,System.Object,System.IO.Stream,System.Net.Http.Headers.HttpContentHeaders,System.Net.Http.Formatting.FormatterContext,System.Net.TransportContext)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.MediaTypeFormatterCollection"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterCollection.#ctor"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterCollection.#ctor(System.Collections.Generic.IEnumerable{System.Net.Http.Formatting.MediaTypeFormatter})"></member>
+    <member name="P:System.Net.Http.Formatting.MediaTypeFormatterCollection.FormUrlEncodedFormatter">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.FormUrlEncodedMediaTypeFormatter" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.MediaTypeFormatterCollection.JsonFormatter">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.JsonMediaTypeFormatter" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.MediaTypeFormatterCollection.XmlFormatter">
+      <returns>Returns <see cref="T:System.Net.Http.Formatting.XmlMediaTypeFormatter" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.MediaTypeFormatterExtensions"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterExtensions.AddMediaRangeMapping(System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterExtensions.AddMediaRangeMapping(System.Net.Http.Formatting.MediaTypeFormatter,System.String,System.String)"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterExtensions.AddQueryStringMapping(System.Net.Http.Formatting.MediaTypeFormatter,System.String,System.String,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterExtensions.AddQueryStringMapping(System.Net.Http.Formatting.MediaTypeFormatter,System.String,System.String,System.String)"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterExtensions.AddRequestHeaderMapping(System.Net.Http.Formatting.MediaTypeFormatter,System.String,System.String,System.StringComparison,System.Boolean,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterExtensions.AddRequestHeaderMapping(System.Net.Http.Formatting.MediaTypeFormatter,System.String,System.String,System.StringComparison,System.Boolean,System.String)"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterExtensions.AddUriPathExtensionMapping(System.Net.Http.Formatting.MediaTypeFormatter,System.String,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeFormatterExtensions.AddUriPathExtensionMapping(System.Net.Http.Formatting.MediaTypeFormatter,System.String,System.String)"></member>
+    <member name="T:System.Net.Http.Formatting.MediaTypeMapping"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeMapping.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeMapping.#ctor(System.String)"></member>
+    <member name="P:System.Net.Http.Formatting.MediaTypeMapping.MediaType">
+      <returns>Returns <see cref="T:System.Net.Http.Headers.MediaTypeHeaderValue" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeMapping.OnTryMatchMediaType(System.Net.Http.HttpRequestMessage)">
+      <returns>Returns <see cref="T:System.Double" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeMapping.OnTryMatchMediaType(System.Net.Http.HttpResponseMessage)">
+      <returns>Returns <see cref="T:System.Double" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeMapping.TryMatchMediaType(System.Net.Http.HttpRequestMessage)">
+      <returns>Returns <see cref="T:System.Double" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.MediaTypeMapping.TryMatchMediaType(System.Net.Http.HttpResponseMessage)">
+      <returns>Returns <see cref="T:System.Double" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.QueryStringMapping"></member>
+    <member name="M:System.Net.Http.Formatting.QueryStringMapping.#ctor(System.String,System.String,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.Formatting.QueryStringMapping.#ctor(System.String,System.String,System.String)"></member>
+    <member name="P:System.Net.Http.Formatting.QueryStringMapping.QueryStringParameterName">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.QueryStringMapping.QueryStringParameterValue">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.RequestHeaderMapping"></member>
+    <member name="M:System.Net.Http.Formatting.RequestHeaderMapping.#ctor(System.String,System.String,System.StringComparison,System.Boolean,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.Formatting.RequestHeaderMapping.#ctor(System.String,System.String,System.StringComparison,System.Boolean,System.String)"></member>
+    <member name="P:System.Net.Http.Formatting.RequestHeaderMapping.HeaderName">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.RequestHeaderMapping.HeaderValue">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.RequestHeaderMapping.HeaderValueComparison">
+      <returns>Returns <see cref="T:System.StringComparison" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.RequestHeaderMapping.IsValueSubstring">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.RequestHeaderMapping.OnTryMatchMediaType(System.Net.Http.HttpRequestMessage)">
+      <returns>Returns <see cref="T:System.Double" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.RequestHeaderMapping.OnTryMatchMediaType(System.Net.Http.HttpResponseMessage)">
+      <returns>Returns <see cref="T:System.Double" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.UriPathExtensionMapping"></member>
+    <member name="M:System.Net.Http.Formatting.UriPathExtensionMapping.#ctor(System.String,System.Net.Http.Headers.MediaTypeHeaderValue)"></member>
+    <member name="M:System.Net.Http.Formatting.UriPathExtensionMapping.#ctor(System.String,System.String)"></member>
+    <member name="P:System.Net.Http.Formatting.UriPathExtensionMapping.UriPathExtension">
+      <returns>Returns <see cref="T:System.String" />.</returns>
+    </member>
+    <member name="T:System.Net.Http.Formatting.XmlMediaTypeFormatter"></member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.#ctor"></member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.CanReadType(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.CanWriteType(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.XmlMediaTypeFormatter.CharacterEncoding">
+      <returns>Returns <see cref="T:System.Text.Encoding" />.</returns>
+    </member>
+    <member name="P:System.Net.Http.Formatting.XmlMediaTypeFormatter.DefaultMediaType">
+      <returns>Returns <see cref="T:System.Net.Http.Headers.MediaTypeHeaderValue" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.OnReadFromStreamAsync(System.Void,System.Object,System.Type,System.IO.Stream)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task`1" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.OnWriteToStreamAsync(System.Type,System.Object,System.IO.Stream,System.Net.Http.Headers.HttpContentHeaders,System.Net.Http.Formatting.FormatterContext,System.Net.TransportContext)">
+      <returns>Returns <see cref="T:System.Threading.Tasks.Task" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.RemoveSerializer(System.Type)">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.SetSerializer``1(System.Runtime.Serialization.XmlObjectSerializer)">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.SetSerializer(System.Type,System.Runtime.Serialization.XmlObjectSerializer)"></member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.SetSerializer(System.Type,System.Xml.Serialization.XmlSerializer)"></member>
+    <member name="M:System.Net.Http.Formatting.XmlMediaTypeFormatter.SetSerializer``1(System.Xml.Serialization.XmlSerializer)">
+      <typeparam name="T"></typeparam>
+    </member>
+    <member name="P:System.Net.Http.Formatting.XmlMediaTypeFormatter.UseDataContractSerializer">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+  </members>
+</doc>

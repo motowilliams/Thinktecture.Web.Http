@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Web.Http.WebHost</name>
+  </assembly>
+  <members>
+    <member name="T:System.Web.Http.GlobalConfiguration"></member>
+    <member name="P:System.Web.Http.GlobalConfiguration.Configuration">
+      <returns>Returns <see cref="T:System.Web.Http.HttpConfiguration" />.</returns>
+    </member>
+    <member name="T:System.Web.Http.RouteCollectionExtensions"></member>
+    <member name="M:System.Web.Http.RouteCollectionExtensions.MapHttpRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.Object)">
+      <returns>Returns <see cref="T:System.Web.Routing.Route" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.RouteCollectionExtensions.MapHttpRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.Object,System.Object)">
+      <returns>Returns <see cref="T:System.Web.Routing.Route" />.</returns>
+    </member>
+    <member name="T:System.Web.Http.WebHost.HttpControllerHandler"></member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerHandler.#ctor(System.Web.Routing.RouteData)"></member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerHandler.BeginProcessRequest(System.Web.HttpContextBase,System.AsyncCallback,System.Object)">
+      <returns>Returns <see cref="T:System.IAsyncResult" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerHandler.EndProcessRequest(System.IAsyncResult)"></member>
+    <member name="P:System.Web.Http.WebHost.HttpControllerHandler.IsReusable">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerHandler.ProcessRequest(System.Web.HttpContextBase)"></member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerHandler.System#Web#IHttpAsyncHandler#BeginProcessRequest(System.Web.HttpContext,System.AsyncCallback,System.Object)">
+      <returns>Returns <see cref="T:System.IAsyncResult" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerHandler.System#Web#IHttpAsyncHandler#EndProcessRequest(System.IAsyncResult)"></member>
+    <member name="P:System.Web.Http.WebHost.HttpControllerHandler.System#Web#IHttpHandler#IsReusable">
+      <returns>Returns <see cref="T:System.Boolean" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerHandler.System#Web#IHttpHandler#ProcessRequest(System.Web.HttpContext)"></member>
+    <member name="T:System.Web.Http.WebHost.HttpControllerRouteHandler"></member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerRouteHandler.#ctor"></member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerRouteHandler.GetHttpHandler(System.Web.Routing.RequestContext)">
+      <returns>Returns <see cref="T:System.Web.IHttpHandler" />.</returns>
+    </member>
+    <member name="P:System.Web.Http.WebHost.HttpControllerRouteHandler.Instance">
+      <returns>Returns <see cref="T:System.Web.Http.WebHost.HttpControllerRouteHandler" />.</returns>
+    </member>
+    <member name="M:System.Web.Http.WebHost.HttpControllerRouteHandler.System#Web#Routing#IRouteHandler#GetHttpHandler(System.Web.Routing.RequestContext)">
+      <returns>Returns <see cref="T:System.Web.IHttpHandler" />.</returns>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinktecture.Web.Http", "Thinktecture.Web.Http\Thinktecture.Web.Http.csproj", "{915BB2DC-0A07-4DBB-802B-C299B3A492EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{F10002A0-E70E-49F9-B0EA-BD74A65056F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{675D8093-097F-4D9F-8E00-1A1FC482010E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CM", "ContactManager\ContactManager\CM.csproj", "{F36FD487-5F92-483F-94CC-5F59E0338FCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{915BB2DC-0A07-4DBB-802B-C299B3A492EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915BB2DC-0A07-4DBB-802B-C299B3A492EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915BB2DC-0A07-4DBB-802B-C299B3A492EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915BB2DC-0A07-4DBB-802B-C299B3A492EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36FD487-5F92-483F-94CC-5F59E0338FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36FD487-5F92-483F-94CC-5F59E0338FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36FD487-5F92-483F-94CC-5F59E0338FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36FD487-5F92-483F-94CC-5F59E0338FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F36FD487-5F92-483F-94CC-5F59E0338FCE} = {F10002A0-E70E-49F9-B0EA-BD74A65056F6}
+	EndGlobalSection
+EndGlobal
