@@ -14,7 +14,7 @@ namespace ContactManager.ConsoleSelfHost
         static void Main(string[] args)
         {
             var a = Assembly.Load("ContactManager.APIs");
-            
+
             var host = SetupWebApiServer(webApiUrl);
             host.OpenAsync().Wait();
 
@@ -25,16 +25,20 @@ namespace ContactManager.ConsoleSelfHost
             host.CloseAsync().Wait();
         }
 
-        private static HttpSelfHostServer SetupWebApiServer(string webApiUrl)
+        private static HttpSelfHostServer SetupWebApiServer(string url)
         {
             var ninjectKernel = new StandardKernel();
             ninjectKernel.Bind<IContactRepository>().To<InMemoryContactRepository>();
 
-            var configuration = new HttpSelfHostConfiguration(webApiUrl);
+            var configuration = new HttpSelfHostConfiguration(url);
             configuration.ServiceResolver.SetResolver(
                 t => ninjectKernel.TryGet(t),
                 t => ninjectKernel.GetAll(t));
-            configuration.Routes.MapHttpRoute("default", "{controller}/{id}", new { id = RouteParameter.Optional });
+
+            configuration.Routes.MapHttpRoute(
+                "Default",
+                "{controller}/{id}/{ext}",
+                new {id = RouteParameter.Optional, ext = RouteParameter.Optional});
 
             var host = new HttpSelfHostServer(configuration);
 

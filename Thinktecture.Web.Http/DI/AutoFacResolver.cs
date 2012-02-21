@@ -5,24 +5,42 @@ using Autofac;
 
 namespace Thinktecture.Web.Http.DI
 {
-    // NOTE: this is not working the way it should be - still investigating...
     public class AutoFacResolver : IDependencyResolver
     {
         private readonly IContainer container;
 
-        public AutoFacResolver(IContainer container) : base()
+        public AutoFacResolver(IContainer container)
         {
             this.container = container;
         }
 
         public object GetService(Type serviceType)
         {
-            return container.Resolve(serviceType);
+            if (container.IsRegistered(serviceType))
+            {
+                var service = container.Resolve(serviceType);
+
+                return service;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-            return (IEnumerable<object>)container.Resolve(typeof(IEnumerable<>).MakeGenericType(new[] { serviceType }));
+
+            if (container.IsRegistered(serviceType))
+            {
+                var services = (IEnumerable<object>)container.Resolve(typeof(IEnumerable<>).MakeGenericType(new[] { serviceType }));
+
+                return services;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

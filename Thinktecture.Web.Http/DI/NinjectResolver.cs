@@ -16,7 +16,7 @@ namespace Thinktecture.Web.Http.DI
 
         public object GetService(Type serviceType)
         {
-            return kernel.TryGet(serviceType);             
+            return kernel.TryGet(serviceType);
         }
 
         public IEnumerable<object> GetServices(Type serviceType)

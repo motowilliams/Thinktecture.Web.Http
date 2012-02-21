@@ -6,6 +6,7 @@ using ContactManager.Web.Formatters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Ninject;
+using Thinktecture.Web.Http.DI;
 using Thinktecture.Web.Http.Formatters;
 using Thinktecture.Web.Http.Handlers;
 using Thinktecture.Web.Http.Selectors;
@@ -26,18 +27,21 @@ namespace ContactManager.Web
             
             config.MessageHandlers.Add(new UriFormatExtensionHandler(new UriExtensionMappings()));            
             
-            var kernel = new StandardKernel();
-            kernel.Bind<IContactRepository>().ToConstant(new InMemoryContactRepository());
-            kernel.Bind<IHttpActionSelector>().ToConstant(new CorsActionSelector());
-            config.ServiceResolver.SetResolver(
-                t => kernel.TryGet(t),
-                t => kernel.GetAll(t));
+            ConfigureResolver(config);
 
             config.Routes.MapHttpRoute(
                 "Default",
                 "{controller}/{id}/{ext}",
-                new { id = RouteParameter.Optional, ext = RouteParameter.Optional }
-            );
+                new { id = RouteParameter.Optional, ext = RouteParameter.Optional });
+        }
+
+        private static void ConfigureResolver(HttpConfiguration config)
+        {
+            var kernel = new StandardKernel();
+            kernel.Bind<IContactRepository>().ToConstant(new InMemoryContactRepository());
+            kernel.Bind<IHttpActionSelector>().ToConstant(new CorsActionSelector());
+
+            config.ServiceResolver.SetResolver(new NinjectResolver(kernel));
         }
 
         protected void Application_Start()
