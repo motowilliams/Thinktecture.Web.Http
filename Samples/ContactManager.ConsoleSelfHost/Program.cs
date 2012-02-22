@@ -11,9 +11,9 @@ namespace ContactManager.ConsoleSelfHost
     {
         private const string webApiUrl = "http://localhost:7777/services/cm";
 
-        static void Main(string[] args)
+        static void Main()
         {
-            var a = Assembly.Load("ContactManager.APIs");
+            Assembly.Load("ContactManager.APIs");
 
             var host = SetupWebApiServer(webApiUrl);
             host.OpenAsync().Wait();

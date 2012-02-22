@@ -13,25 +13,25 @@ namespace Thinktecture.Web.Http.Selectors
     // Code based on: http://code.msdn.microsoft.com/Implementing-CORS-support-418970ee
     public class CorsActionSelector : ApiControllerActionSelector
     {
-        private const string Origin = "Origin";
-        private const string AccessControlRequestMethod = "Access-Control-Request-Method";
-        private const string AccessControlRequestHeaders = "Access-Control-Request-Headers";
-        private const string AccessControlAllowMethods = "Access-Control-Allow-Methods";
-        private const string AccessControlAllowHeaders = "Access-Control-Allow-Headers";
+        private const string origin = "Origin";
+        private const string accessControlRequestMethod = "Access-Control-Request-Method";
+        private const string accessControlRequestHeaders = "Access-Control-Request-Headers";
+        private const string accessControlAllowMethods = "Access-Control-Allow-Methods";
+        private const string accessControlAllowHeaders = "Access-Control-Allow-Headers";
 
         public override HttpActionDescriptor SelectAction(HttpControllerContext controllerContext)
         {
             var originalRequest = controllerContext.Request;
-            var isCorsRequest = originalRequest.Headers.Contains(Origin);
+            var isCorsRequest = originalRequest.Headers.Contains(origin);
 
             if (originalRequest.Method == HttpMethod.Options && isCorsRequest)
             {
-                var accessControlRequestMethod = originalRequest.Headers.GetValues(AccessControlRequestMethod).FirstOrDefault();
+                var currentAccessControlRequestMethod = originalRequest.Headers.GetValues(accessControlRequestMethod).FirstOrDefault();
 
-                if (!string.IsNullOrEmpty(accessControlRequestMethod))
+                if (!string.IsNullOrEmpty(currentAccessControlRequestMethod))
                 {
                     var modifiedRequest = new HttpRequestMessage(
-                        new HttpMethod(accessControlRequestMethod),
+                        new HttpMethod(currentAccessControlRequestMethod),
                         originalRequest.RequestUri);
                     controllerContext.Request = modifiedRequest;
                     var actualDescriptor = base.SelectAction(controllerContext);
@@ -53,31 +53,31 @@ namespace Thinktecture.Web.Http.Selectors
         class PreflightActionDescriptor : HttpActionDescriptor
         {
             private readonly HttpActionDescriptor originalAction;
-            private readonly string accessControlRequestMethod;
+            private readonly string prefilghtAccessControlRequestMethod;
 
             public PreflightActionDescriptor(HttpActionDescriptor originalAction, string accessControlRequestMethod)
             {
                 this.originalAction = originalAction;
-                this.accessControlRequestMethod = accessControlRequestMethod;
+                this.prefilghtAccessControlRequestMethod = accessControlRequestMethod;
             }
 
             public override string ActionName
             {
-                get { return this.originalAction.ActionName; }
+                get { return originalAction.ActionName; }
             }
 
             public override object Execute(HttpControllerContext controllerContext, IDictionary<string, object> arguments)
             {
                 var response = new HttpResponseMessage(HttpStatusCode.OK);
-                response.Headers.Add(AccessControlAllowMethods, this.accessControlRequestMethod);
+                response.Headers.Add(accessControlAllowMethods, prefilghtAccessControlRequestMethod);
 
                 var requestedHeaders = string.Join(
                     ", ",
-                    controllerContext.Request.Headers.GetValues(AccessControlRequestHeaders));
+                    controllerContext.Request.Headers.GetValues(accessControlRequestHeaders));
 
                 if (!string.IsNullOrEmpty(requestedHeaders))
                 {
-                    response.Headers.Add(AccessControlAllowHeaders, requestedHeaders);
+                    response.Headers.Add(accessControlAllowHeaders, requestedHeaders);
                 }
 
                 return response;

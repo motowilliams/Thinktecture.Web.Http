@@ -31,7 +31,7 @@ namespace Thinktecture.Web.Http
         protected override Task SerializeToStreamAsync(Stream stream, TransportContext context)
         {
             // FormatterContext is required by XmlMediaTypeFormatter, but is not used by WriteToStreamAsync of XmlMediaTypeFormatter!
-            return formatter.WriteToStreamAsync(typeof(T), outboundInstance, stream, this.Headers, new FormatterContext(new MediaTypeHeaderValue("application/bogus"), false), null);
+            return formatter.WriteToStreamAsync(typeof(T), outboundInstance, stream, Headers, new FormatterContext(new MediaTypeHeaderValue("application/bogus"), false), null);
         }
 
         public Task<T> ReadAsync()

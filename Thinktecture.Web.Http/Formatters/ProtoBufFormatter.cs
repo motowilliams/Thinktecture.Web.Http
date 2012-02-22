@@ -50,7 +50,7 @@ namespace Thinktecture.Web.Http.Formatters
             if (type == typeof(IKeyValueModel))
             {
                 return false;
-            };
+            }
 
             return true;
         }

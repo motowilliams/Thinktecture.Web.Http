@@ -9,14 +9,14 @@ namespace Thinktecture.Web.Http.Handlers
     public class MethodOverrideHandler : DelegatingHandler
     {
         private readonly string[] methods = { "DELETE", "HEAD", "PUT" };
-        private const string Header = "X-HTTP-Method-Override";
+        private const string header = "X-HTTP-Method-Override";
 
         protected override Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            if (request.Method == HttpMethod.Post && request.Headers.Contains(Header))
+            if (request.Method == HttpMethod.Post && request.Headers.Contains(header))
             {
-                var method = request.Headers.GetValues(Header).FirstOrDefault();
+                var method = request.Headers.GetValues(header).FirstOrDefault();
 
                 if (methods.Contains(method, StringComparer.InvariantCultureIgnoreCase))
                 {

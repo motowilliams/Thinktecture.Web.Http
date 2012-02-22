@@ -9,17 +9,17 @@ namespace Thinktecture.Web.Http.Handlers
     // Code based on: http://code.msdn.microsoft.com/Implementing-CORS-support-a677ab5d
     public class SimpleCorsHandler : DelegatingHandler
     {
-        private const string Origin = "Origin";
-        private const string AccessControlRequestMethod = "Access-Control-Request-Method";
-        private const string AccessControlRequestHeaders = "Access-Control-Request-Headers";
-        private const string AccessControlAllowOrigin = "Access-Control-Allow-Origin";
-        private const string AccessControlAllowMethods = "Access-Control-Allow-Methods";
-        private const string AccessControlAllowHeaders = "Access-Control-Allow-Headers";
+        private const string origin = "Origin";
+        private const string accessControlRequestMethod = "Access-Control-Request-Method";
+        private const string accessControlRequestHeaders = "Access-Control-Request-Headers";
+        private const string accessControlAllowOrigin = "Access-Control-Allow-Origin";
+        private const string accessControlAllowMethods = "Access-Control-Allow-Methods";
+        private const string accessControlAllowHeaders = "Access-Control-Allow-Headers";
 
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,
                                                                CancellationToken cancellationToken)
         {
-            var isCorsRequest = request.Headers.Contains(Origin);
+            var isCorsRequest = request.Headers.Contains(origin);
             var isPreflightRequest = request.Method == HttpMethod.Options;
 
             if (isCorsRequest)
@@ -29,24 +29,24 @@ namespace Thinktecture.Web.Http.Handlers
                     return Task.Factory.StartNew(() =>
                             {
                                 var response = new HttpResponseMessage(HttpStatusCode.OK);
-                                response.Headers.Add(AccessControlAllowOrigin,
-                                                    request.Headers.GetValues(Origin).First());
+                                response.Headers.Add(accessControlAllowOrigin,
+                                                    request.Headers.GetValues(origin).First());
 
-                                var accessControlRequestMethod =
-                                    request.Headers.GetValues(AccessControlRequestMethod).
+                                var currentAccessControlRequestMethod =
+                                    request.Headers.GetValues(accessControlRequestMethod).
                                         FirstOrDefault();
 
-                                if (accessControlRequestMethod != null)
+                                if (currentAccessControlRequestMethod != null)
                                 {
-                                    response.Headers.Add(AccessControlAllowMethods,
-                                                        accessControlRequestMethod);
+                                    response.Headers.Add(accessControlAllowMethods,
+                                                        currentAccessControlRequestMethod);
                                 }
 
-                                var requestedHeaders = string.Join(", ", request.Headers.GetValues(AccessControlRequestHeaders));
+                                var requestedHeaders = string.Join(", ", request.Headers.GetValues(accessControlRequestHeaders));
 
                                 if (!string.IsNullOrEmpty(requestedHeaders))
                                 {
-                                    response.Headers.Add(AccessControlAllowHeaders,
+                                    response.Headers.Add(accessControlAllowHeaders,
                                                         requestedHeaders);
                                 }
 
@@ -59,8 +59,8 @@ namespace Thinktecture.Web.Http.Handlers
                             {
                                 var resp = t.Result;
                                 resp.Headers.Add(
-                                    AccessControlAllowOrigin,
-                                    request.Headers.GetValues(Origin).First());
+                                    accessControlAllowOrigin,
+                                    request.Headers.GetValues(origin).First());
                                 
                                 return resp;
                             });
