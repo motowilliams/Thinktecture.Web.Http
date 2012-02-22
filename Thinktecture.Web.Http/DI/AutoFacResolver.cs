@@ -30,7 +30,6 @@ namespace Thinktecture.Web.Http.DI
 
         public IEnumerable<object> GetServices(Type serviceType)
         {
-
             if (container.IsRegistered(serviceType))
             {
                 var services = (IEnumerable<object>)container.Resolve(typeof(IEnumerable<>).MakeGenericType(new[] { serviceType }));
